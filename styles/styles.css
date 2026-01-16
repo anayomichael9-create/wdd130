@@ -22,7 +22,7 @@ img {
 }
 
 p {
-    padding: 10px;
+    padding: 0px;
 }
 
 main {
@@ -53,7 +53,7 @@ main img {
 }
 
 p {
-    padding: 0%;
+    padding: 0px;
 }
 
 footer {
