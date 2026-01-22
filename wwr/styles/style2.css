@@ -1,0 +1,316 @@
+/* =========================
+   Brand Theme
+   ========================= */
+:root {
+    --primary-color: #0D47A1;
+    /* deep navy */
+    --secondary-color: #FF9800;
+    /* orange accent */
+    --accent1-colour: #4CAF50;
+    /* green (optional) */
+    --accent2-color: #FFFFFF;
+    /* white */
+    --ink-900: #0B2F6A;
+    /* darker navy for bars */
+    --ink-700: #123E88;
+    --text-900: #1F2937;
+    --muted-600: #6B7280;
+    --bg: #ffffff;
+    --shadow-lg: 0 10px 25px rgba(13, 71, 161, .18);
+    --shadow-sm: 0 4px 12px rgba(13, 71, 161, .12);
+    --radius: 8px;
+}
+
+/* Reset-ish */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    color: var(--text-900);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* =========================
+   Header / Logo + Simple Nav
+   ========================= */
+.header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.header__logo img {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+.header__brand {
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: .4px;
+}
+
+.nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav a {
+    color: var(--primary-color);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline
+}
+
+/* Optional tiny dotted list style (matches the screenshot’s left menu feel) */
+.nav--bulleted {
+    list-style: disc;
+    padding-left: 18px;
+    color: var(--primary-color);
+}
+
+/* =========================
+   HERO (full-bleed image)
+   ========================= */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero__media {
+    display: block;
+    width: 100%;
+    height: 460px;
+    /* desktop height like the screenshot */
+    object-fit: cover;
+    /* fills like a real photo banner */
+}
+
+/* Dark ribbon headline band across the hero */
+.hero__ribbon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 38px;
+    /* sits near the top like the image */
+    margin: auto;
+    background: rgba(13, 47, 106, .88);
+    /* deep navy translucent */
+    color: var(--accent2-color);
+    text-align: center;
+    font-weight: 800;
+    font-size: clamp(20px, 3vw, 30px);
+    letter-spacing: .6px;
+    padding: 14px 18px;
+}
+
+/* Translucent info panel overlay near the bottom */
+.hero__panel {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 14px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: rgba(13, 47, 106, .75);
+    /* blue glass */
+    color: var(--accent2-color);
+    border-radius: 4px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, .22);
+    backdrop-filter: saturate(135%) blur(2px);
+}
+
+.hero__panel p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Small thumbnail on the right of the panel (like screenshot) */
+.hero__thumb {
+    margin-left: auto;
+    flex: 0 0 72px;
+    width: 72px;
+    height: 48px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    object-fit: cover;
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   Section Title Bars
+   ========================= */
+.section {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+
+.section__bar {
+    background: var(--ink-900);
+    color: var(--accent2-color);
+    font-weight: 800;
+    text-align: center;
+    padding: 12px 14px;
+    border-radius: 4px;
+    letter-spacing: .4px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Paragraph block below the bar */
+.section__body {
+    margin-top: 10px;
+    color: var(--text-900);
+    font-size: 15px;
+    background: var(--bg);
+    padding: 0 2px;
+    /* very thin—screenshot shows text directly on white */
+}
+
+/* Divider space before next bar */
+.section + .section {
+    margin-top: 22px;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.footer {
+    max-width: 1100px;
+    margin: 30px auto 18px;
+    padding: 0 20px;
+    color: var(--muted-600);
+    font-size: 13px;
+}
+
+.footer__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.footer__left {
+    white-space: nowrap;
+}
+
+.footer__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Social icons as circles with brand accent hover */
+.social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.social:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #111;
+}
+
+/* =========================
+   Helpers
+   ========================= */
+.container-full {
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 900px) {
+    .hero__media {
+        height: 380px;
+    }
+
+    .hero__panel {
+        left: 12px;
+        right: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 12px 16px
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .hero__media {
+        height: 300px;
+    }
+
+    .hero__ribbon {
+        top: 22px;
+        padding: 10px 12px;
+    }
+
+    .hero__panel {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero__thumb {
+        margin-left: 0;
+        width: 88px;
+        height: 56px;
+    }
+
+    .footer__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+``

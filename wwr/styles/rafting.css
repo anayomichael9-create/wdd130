@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #0D47A1;
+    --secondary-color: #e27d09;
+    --accent1-colour: #000000;
+    --accent2-color: #FFFFFF;
+    --heading-font: "Times New Romans", "Georgia", serif;
+    --body-font: Ariel, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 16px;
+    height: 400px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-colour);
+    background-color: #FFFFFF;
+}
+
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+header nav {
+    color: #eee;
+    background-color: var(--secondary-color);
+    float: right;
+    padding: 16px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    opacity: 0.7;
+    color: #eee;
+}
+
+h2 {
+    padding: 16px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: #eee;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: left;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+}
+
+footer {
+    padding: 16px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #eee;
+}
