@@ -30,6 +30,7 @@ nav a {
 
 h1 {
     border-bottom: 1px solid #222;
+    position: inherit;
 }
 
 p {
@@ -55,16 +56,23 @@ aside {
     grid-row: 1/2;
 }
 
-aside img {
-    width: 100%;
-    height: auto;
-}
-
 aside h2 {
     position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: #cccaca;
+    opacity: 0.7;
+    color: #640115;
     left: 50%;
     transform: translateX(-50%);
     top: 3rem;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
 }
 
 main img {
